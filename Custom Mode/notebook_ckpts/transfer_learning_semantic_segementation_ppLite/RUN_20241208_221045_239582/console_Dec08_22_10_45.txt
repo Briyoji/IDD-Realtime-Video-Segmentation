@@ -1,0 +1,31 @@
+============================================================
+New run started at 2024-12-08.21:53:30.819470
+sys.argv: "/home/gaurav/Documents/Semester 5/DL/DL Project/Custom Mode/.venv/lib/python3.10/site-packages/ipykernel_launcher.py --f=/home/gaurav/.local/share/jupyter/runtime/kernel-v398ad60591c4bbb8121b5c0c8f50d736b836eea16.json"
+============================================================
+The console stream is logged into /home/gaurav/sg_logs/console.log
+/home/gaurav/Documents/Semester 5/DL/DL Project/Custom Mode
+/home/gaurav/Documents/Semester 5/DL/DL Project/Custom Mode
+/home/gaurav/Documents/Semester 5/DL/DL Project/Custom Mode
+torch.Size([4, 3, 256, 256]) torch.Size([4, 256, 256, 3])
+The console stream is now moved to ./notebook_ckpts/transfer_learning_semantic_segementation_ppLite/RUN_20241208_221045_239582/console_Dec08_22_10_45.txt
+/home/gaurav/Documents/Semester 5/DL/DL Project/Custom Mode/.venv/lib/python3.10/site-packages/super_gradients/training/sg_trainer/sg_trainer.py:1753: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = GradScaler(enabled=mixed_precision_enabled)
+[2024-12-08 22:10:46] INFO - sg_trainer_utils.py - TRAINING PARAMETERS:
+    - Mode:                         Single GPU
+    - Number of GPUs:               1          (1 available on the machine)
+    - Full dataset size:            48         (len(train_set))
+    - Batch size per GPU:           4          (batch_size)
+    - Batch Accumulate:             1          (batch_accumulate)
+    - Total batch size:             4          (num_gpus * batch_size)
+    - Effective Batch size:         4          (num_gpus * batch_size * batch_accumulate)
+    - Iterations per epoch:         12         (len(train_loader))
+    - Gradient updates per epoch:   12         (len(train_loader) / batch_accumulate)
+    - Model: DDRNet23  (20.15M parameters, 20.15M optimized)
+    - Learning Rates and Weight Decays:
+      - default: (20.15M parameters). LR: 0.005 (20.15M parameters) WD: 0.0001, (20.15M parameters)
+
+[2024-12-08 22:10:46] INFO - sg_trainer.py - Started training for 10 epochs (0/9)
+
+  0%|          | 0/12 [00:00<?, ?it/s]Train epoch 0:   0%|          | 0/12 [00:00<?, ?it/s]/home/gaurav/Documents/Semester 5/DL/DL Project/Custom Mode/.venv/lib/python3.10/site-packages/super_gradients/training/sg_trainer/sg_trainer.py:502: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.training_params.mixed_precision):
+Train epoch 0:   0%|          | 0/12 [00:01<?, ?it/s]

@@ -1,0 +1,10 @@
+./example_data/images/train/0.jpg ./example_data/labels/train/0.png
+./example_data/images/train/1.jpg ./example_data/labels/train/1.png
+./example_data/images/train/2.jpg ./example_data/labels/train/2.png
+./example_data/images/train/3.jpg ./example_data/labels/train/3.png
+./example_data/images/train/4.jpg ./example_data/labels/train/4.png
+./example_data/images/train/5.jpg ./example_data/labels/train/5.png
+./example_data/images/train/6.jpg ./example_data/labels/train/6.png
+./example_data/images/train/7.jpg ./example_data/labels/train/7.png
+./example_data/images/train/8.jpg ./example_data/labels/train/8.png
+./example_data/images/train/9.jpg ./example_data/labels/train/9.png

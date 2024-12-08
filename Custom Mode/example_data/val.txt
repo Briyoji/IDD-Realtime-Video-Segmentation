@@ -1,0 +1,10 @@
+./example_data/images/val/0.jpg ./example_data/labels/val/0.png
+./example_data/images/val/1.jpg ./example_data/labels/val/1.png
+./example_data/images/val/2.jpg ./example_data/labels/val/2.png
+./example_data/images/val/3.jpg ./example_data/labels/val/3.png
+./example_data/images/val/4.jpg ./example_data/labels/val/4.png
+./example_data/images/val/5.jpg ./example_data/labels/val/5.png
+./example_data/images/val/6.jpg ./example_data/labels/val/6.png
+./example_data/images/val/7.jpg ./example_data/labels/val/7.png
+./example_data/images/val/8.jpg ./example_data/labels/val/8.png
+./example_data/images/val/9.jpg ./example_data/labels/val/9.png

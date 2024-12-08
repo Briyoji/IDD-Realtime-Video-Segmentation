@@ -1,0 +1,409 @@
+--------- config parameters ----------
+{
+    "checkpoint_params": {
+        "load_checkpoint": false,
+        "schema": null
+    },
+    "training_hyperparams": {
+        "lr_warmup_epochs": 0,
+        "lr_warmup_steps": 0,
+        "lr_cooldown_epochs": 0,
+        "warmup_initial_lr": null,
+        "cosine_final_lr_ratio": 0.01,
+        "optimizer": "SGD",
+        "optimizer_params": {},
+        "criterion_params": {},
+        "ema": false,
+        "batch_accumulate": 1,
+        "ema_params": {},
+        "zero_weight_decay_on_bias_and_bn": false,
+        "load_opt_params": true,
+        "run_validation_freq": 1,
+        "run_test_freq": 1,
+        "save_model": true,
+        "metric_to_watch": "IoU",
+        "launch_tensorboard": false,
+        "tb_files_user_prompt": false,
+        "silent_mode": false,
+        "mixed_precision": false,
+        "tensorboard_port": null,
+        "save_ckpt_epoch_list": [],
+        "average_best_models": false,
+        "dataset_statistics": false,
+        "save_tensorboard_to_s3": false,
+        "lr_schedule_function": null,
+        "train_metrics_list": [
+            "IoU()"
+        ],
+        "valid_metrics_list": [
+            "IoU()"
+        ],
+        "greater_metric_to_watch_is_better": true,
+        "precise_bn": false,
+        "precise_bn_batch_size": null,
+        "seed": 42,
+        "lr_mode": "cosine",
+        "phase_callbacks": [
+            "BinarySegmentationVisualizationCallback"
+        ],
+        "log_installed_packages": true,
+        "sg_logger": "base_sg_logger",
+        "sg_logger_params": {
+            "tb_files_user_prompt": false,
+            "project_name": "",
+            "launch_tensorboard": false,
+            "tensorboard_port": null,
+            "save_checkpoints_remote": false,
+            "save_tensorboard_remote": false,
+            "save_logs_remote": false
+        },
+        "warmup_mode": "LinearEpochLRWarmup",
+        "step_lr_update_freq": null,
+        "lr_updates": [],
+        "initial_lr": 0.005,
+        "clip_grad_norm": null,
+        "pre_prediction_callback": null,
+        "ckpt_best_name": "ckpt_best.pth",
+        "enable_qat": false,
+        "resume": false,
+        "resume_path": null,
+        "ckpt_name": "ckpt_latest.pth",
+        "resume_strict_load": false,
+        "sync_bn": false,
+        "kill_ddp_pgroup_on_end": true,
+        "max_train_batches": null,
+        "max_valid_batches": null,
+        "resume_from_remote_sg_logger": false,
+        "torch_compile": false,
+        "torch_compile_loss": false,
+        "torch_compile_options": {
+            "mode": "reduce-overhead",
+            "fullgraph": false,
+            "dynamic": false,
+            "backend": "inductor",
+            "options": null,
+            "disable": false
+        },
+        "finetune": false,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "max_epochs": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "lr_decay_factor": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "lr_warmup_epochs": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 10
+                },
+                "initial_lr": {
+                    "anyOf": [
+                        {
+                            "type": [
+                                "number",
+                                "string",
+                                "boolean",
+                                "null"
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "patternProperties": {
+                                "^[a-zA-Z0-9_.]+$": {
+                                    "type": "number"
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    ]
+                }
+            },
+            "if": {
+                "properties": {
+                    "lr_mode": {
+                        "const": "StepLRScheduler"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "lr_updates",
+                    "lr_decay_factor"
+                ]
+            },
+            "required": [
+                "max_epochs",
+                "lr_mode",
+                "initial_lr",
+                "loss"
+            ]
+        },
+        "max_epochs": 10,
+        "loss": "CrossEntropyLoss",
+        "loss_logging_items_names": [
+            "loss"
+        ]
+    },
+    "dataset_params": {
+        "train_dataset_params": null,
+        "train_dataloader_params": null,
+        "valid_dataset_params": null,
+        "valid_dataloader_params": null
+    },
+    "additional_log_items": {
+        "initial_LR": 0.005,
+        "num_devices": 1,
+        "multi_gpu": "None",
+        "device_type": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "installed_packages": {
+            "deprecated": "1.2.15",
+            "markdown": "3.7",
+            "markupsafe": "3.0.2",
+            "pyyaml": "6.0.2",
+            "sphinx": "4.0.3",
+            "absl-py": "2.1.0",
+            "alabaster": "0.7.16",
+            "albumentations": "1.3.1",
+            "antlr4-python3-runtime": "4.9.3",
+            "arabic-reshaper": "3.0.0",
+            "asn1crypto": "1.5.1",
+            "asttokens": "3.0.0",
+            "attrs": "24.2.0",
+            "babel": "2.16.0",
+            "boto3": "1.35.76",
+            "botocore": "1.35.76",
+            "build": "1.2.2.post1",
+            "certifi": "2024.8.30",
+            "cffi": "1.17.1",
+            "charset-normalizer": "3.4.0",
+            "click": "8.1.7",
+            "coloredlogs": "15.0.1",
+            "comm": "0.2.2",
+            "contourpy": "1.3.1",
+            "coverage": "5.3.1",
+            "cryptography": "44.0.0",
+            "cssselect2": "0.7.0",
+            "cycler": "0.12.1",
+            "data-gradients": "0.3.2",
+            "debugpy": "1.8.9",
+            "decorator": "5.1.1",
+            "docutils": "0.17.1",
+            "einops": "0.3.2",
+            "exceptiongroup": "1.2.2",
+            "executing": "2.1.0",
+            "filelock": "3.16.1",
+            "flatbuffers": "24.3.25",
+            "fonttools": "4.55.2",
+            "fsspec": "2024.10.0",
+            "future": "1.0.0",
+            "grpcio": "1.68.1",
+            "html5lib": "1.1",
+            "humanfriendly": "10.0",
+            "hydra-core": "1.3.2",
+            "idna": "3.10",
+            "imagededup": "0.3.2",
+            "imageio": "2.36.1",
+            "imagesize": "1.4.1",
+            "ipykernel": "6.29.5",
+            "ipython": "8.30.0",
+            "jedi": "0.19.2",
+            "jinja2": "3.1.4",
+            "jmespath": "1.0.1",
+            "joblib": "1.4.2",
+            "json-tricks": "3.16.1",
+            "jsonschema": "4.23.0",
+            "jsonschema-specifications": "2024.10.1",
+            "jupyter-client": "8.6.3",
+            "jupyter-core": "5.7.2",
+            "kiwisolver": "1.4.7",
+            "lazy-loader": "0.4",
+            "lxml": "5.3.0",
+            "markdown-it-py": "3.0.0",
+            "matplotlib": "3.9.3",
+            "matplotlib-inline": "0.1.7",
+            "mdurl": "0.1.2",
+            "mpmath": "1.3.0",
+            "nest-asyncio": "1.6.0",
+            "networkx": "3.4.2",
+            "numpy": "1.23.0",
+            "nvidia-cublas-cu12": "12.4.5.8",
+            "nvidia-cuda-cupti-cu12": "12.4.127",
+            "nvidia-cuda-nvrtc-cu12": "12.4.127",
+            "nvidia-cuda-runtime-cu12": "12.4.127",
+            "nvidia-cudnn-cu12": "9.1.0.70",
+            "nvidia-cufft-cu12": "11.2.1.3",
+            "nvidia-curand-cu12": "10.3.5.147",
+            "nvidia-cusolver-cu12": "11.6.1.9",
+            "nvidia-cusparse-cu12": "12.3.1.170",
+            "nvidia-nccl-cu12": "2.21.5",
+            "nvidia-nvjitlink-cu12": "12.4.127",
+            "nvidia-nvtx-cu12": "12.4.127",
+            "omegaconf": "2.3.0",
+            "onnx": "1.15.0",
+            "onnxruntime": "1.15.0",
+            "onnxsim": "0.4.36",
+            "opencv-python": "4.10.0.84",
+            "opencv-python-headless": "4.10.0.84",
+            "oscrypto": "1.3.0",
+            "packaging": "24.2",
+            "pandas": "2.2.3",
+            "parso": "0.8.4",
+            "pexpect": "4.9.0",
+            "pillow": "11.0.0",
+            "pip": "24.3.1",
+            "pip-tools": "7.4.1",
+            "platformdirs": "4.3.6",
+            "prompt-toolkit": "3.0.48",
+            "protobuf": "3.20.3",
+            "psutil": "6.1.0",
+            "ptyprocess": "0.7.0",
+            "pure-eval": "0.2.3",
+            "pydeprecate": "0.3.2",
+            "pyhanko": "0.25.3",
+            "pycparser": "2.22",
+            "pygments": "2.18.0",
+            "pyhanko-certvalidator": "0.26.5",
+            "pyparsing": "3.2.0",
+            "pypdf": "5.1.0",
+            "pyproject-hooks": "1.2.0",
+            "python-bidi": "0.6.3",
+            "python-dateutil": "2.9.0.post0",
+            "pytz": "2024.2",
+            "pywavelets": "1.8.0",
+            "pyzmq": "26.2.0",
+            "qrcode": "8.0",
+            "qudida": "0.0.4",
+            "rapidfuzz": "3.10.1",
+            "referencing": "0.35.1",
+            "reportlab": "3.6.13",
+            "requests": "2.32.3",
+            "rich": "13.9.4",
+            "rpds-py": "0.22.3",
+            "s3transfer": "0.10.4",
+            "scikit-image": "0.24.0",
+            "scikit-learn": "1.5.2",
+            "scipy": "1.13.1",
+            "seaborn": "0.13.2",
+            "setuptools": "75.6.0",
+            "six": "1.17.0",
+            "snowballstemmer": "2.2.0",
+            "sphinx-rtd-theme": "1.3.0",
+            "sphinxcontrib-applehelp": "2.0.0",
+            "sphinxcontrib-devhelp": "2.0.0",
+            "sphinxcontrib-htmlhelp": "2.1.0",
+            "sphinxcontrib-jquery": "4.1",
+            "sphinxcontrib-jsmath": "1.0.1",
+            "sphinxcontrib-qthelp": "2.0.0",
+            "sphinxcontrib-serializinghtml": "2.0.0",
+            "stack-data": "0.6.3",
+            "stringcase": "1.2.0",
+            "super-gradients": "3.7.1",
+            "svglib": "1.5.1",
+            "sympy": "1.13.1",
+            "tensorboard": "2.18.0",
+            "tensorboard-data-server": "0.7.2",
+            "termcolor": "1.1.0",
+            "threadpoolctl": "3.5.0",
+            "tifffile": "2024.9.20",
+            "tinycss2": "1.4.0",
+            "tomli": "2.2.1",
+            "torch": "2.5.1",
+            "torchmetrics": "0.8.0",
+            "torchvision": "0.20.1",
+            "tornado": "6.4.2",
+            "tqdm": "4.67.1",
+            "traitlets": "5.14.3",
+            "treelib": "1.6.1",
+            "triton": "3.1.0",
+            "typing-extensions": "4.12.2",
+            "tzdata": "2024.2",
+            "tzlocal": "5.2",
+            "uritools": "4.0.3",
+            "urllib3": "2.2.3",
+            "wcwidth": "0.2.13",
+            "webencodings": "0.5.1",
+            "werkzeug": "3.1.3",
+            "wheel": "0.45.1",
+            "wrapt": "1.17.0",
+            "xhtml2pdf": "0.2.11",
+            "autocommand": "2.2.2",
+            "backports.tarfile": "1.2.0",
+            "importlib-metadata": "8.0.0",
+            "inflect": "7.3.1",
+            "jaraco.collections": "5.1.0",
+            "jaraco.context": "5.3.0",
+            "jaraco.functools": "4.0.1",
+            "jaraco.text": "3.12.1",
+            "more-itertools": "10.3.0",
+            "typeguard": "4.3.0",
+            "zipp": "3.19.2"
+        }
+    }
+}
+------- config parameters end --------
+
+Epoch 0 (1/10)  - Train_Inference_Time: 1013.5228881835938	Train_CrossEntropyLoss: 3.36222767829895	Train_IoU: 0.04153914377093315	
+
+Epoch 0 (1/10)  - Valid_Inference_Time: 348.43572998046875	Valid_CrossEntropyLoss: 3.061267614364624	Valid_IoU: 0.00998388696461916	
+
+Epoch 0 (1/10)  - LR: 0.005	
+
+Epoch 1 (2/10)  - Train_Inference_Time: 193.69480895996094	Train_CrossEntropyLoss: 2.9230356216430664	Train_IoU: 0.04593629762530327	
+
+Epoch 1 (2/10)  - Valid_Inference_Time: 331.1058654785156	Valid_CrossEntropyLoss: 2.4886653423309326	Valid_IoU: 0.03053717128932476	
+
+Epoch 1 (2/10)  - LR: 0.0049493366045999234	
+
+Epoch 2 (3/10)  - Train_Inference_Time: 198.053466796875	Train_CrossEntropyLoss: 2.6338512897491455	Train_IoU: 0.04989386722445488	
+
+Epoch 2 (3/10)  - Valid_Inference_Time: 306.4571533203125	Valid_CrossEntropyLoss: 2.8731346130371094	Valid_IoU: 0.02494962513446808	
+
+Epoch 2 (3/10)  - LR: 0.004689007874957841	
+
+Epoch 3 (4/10)  - Train_Inference_Time: 195.26637268066406	Train_CrossEntropyLoss: 2.573810338973999	Train_IoU: 0.04543309286236763	
+
+Epoch 3 (4/10)  - Valid_Inference_Time: 308.7603759765625	Valid_CrossEntropyLoss: 2.880687713623047	Valid_IoU: 0.025994902476668358	
+
+Epoch 3 (4/10)  - LR: 0.004230193124712325	
+
+Epoch 4 (5/10)  - Train_Inference_Time: 199.80294799804688	Train_CrossEntropyLoss: 2.50738787651062	Train_IoU: 0.03926065191626549	
+
+Epoch 4 (5/10)  - Valid_Inference_Time: 324.4873046875	Valid_CrossEntropyLoss: 2.6576311588287354	Valid_IoU: 0.03262929618358612	
+
+Epoch 4 (5/10)  - LR: 0.003614975525105145	
+
+Epoch 5 (6/10)  - Train_Inference_Time: 194.10166931152344	Train_CrossEntropyLoss: 2.4537546634674072	Train_IoU: 0.04243134334683418	
+
+Epoch 5 (6/10)  - Valid_Inference_Time: 319.5101013183594	Valid_CrossEntropyLoss: 2.5149600505828857	Valid_IoU: 0.04016372188925743	
+
+Epoch 5 (6/10)  - LR: 0.0028997837493238273	
+
+Epoch 6 (7/10)  - Train_Inference_Time: 198.20358276367188	Train_CrossEntropyLoss: 2.4016225337982178	Train_IoU: 0.0483517050743103	
+
+Epoch 6 (7/10)  - Valid_Inference_Time: 331.3638000488281	Valid_CrossEntropyLoss: 2.448812484741211	Valid_IoU: 0.04644140228629112	
+
+Epoch 6 (7/10)  - LR: 0.0021502162506761738	
+
+Epoch 7 (8/10)  - Train_Inference_Time: 199.4027557373047	Train_CrossEntropyLoss: 2.3739330768585205	Train_IoU: 0.050910092890262604	
+
+Epoch 7 (8/10)  - Valid_Inference_Time: 330.29327392578125	Valid_CrossEntropyLoss: 2.405442237854004	Valid_IoU: 0.048842158168554306	
+
+Epoch 7 (8/10)  - LR: 0.0014350244748948548	
+
+Epoch 8 (9/10)  - Train_Inference_Time: 201.3850860595703	Train_CrossEntropyLoss: 2.369422674179077	Train_IoU: 0.05180172994732857	
+
+Epoch 8 (9/10)  - Valid_Inference_Time: 312.6535949707031	Valid_CrossEntropyLoss: 2.3907811641693115	Valid_IoU: 0.049557607620954514	
+
+Epoch 8 (9/10)  - LR: 0.0008198068752876755	
+
+Epoch 9 (10/10)  - Train_Inference_Time: 197.74771118164062	Train_CrossEntropyLoss: 2.369142770767212	Train_IoU: 0.05185741186141968	
+
+Epoch 9 (10/10)  - Valid_Inference_Time: 310.6951904296875	Valid_CrossEntropyLoss: 2.3835654258728027	Valid_IoU: 0.05063246563076973	
+
+Epoch 9 (10/10)  - LR: 0.0003609921250421594	

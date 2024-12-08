@@ -1,0 +1,174 @@
+{
+    "categories": [
+        {
+            "supercategory": "Drivable",
+            "id": 0,
+            "name": "road"
+        },
+        {
+            "supercategory": "Drivable",
+            "id": 1,
+            "name": "parking"
+        },
+        {
+            "supercategory": "Drivable",
+            "id": 2,
+            "name": "drivable fallback"
+        },
+        {
+            "supercategory": "Non Drivable",
+            "id": 3,
+            "name": "sidewalk"
+        },
+        {
+            "supercategory": "Non Drivable",
+            "id": 4,
+            "name": "non-drivable fallback"
+        },
+        {
+            "supercategory": "Non Drivable",
+            "id": 5,
+            "name": "rail track"
+        },
+        {
+            "supercategory": "Living Things",
+            "id": 6,
+            "name": "person"
+        },
+        {
+            "supercategory": "Living Things",
+            "id": 7,
+            "name": "animal"
+        },
+        {
+            "supercategory": "Living Things",
+            "id": 8,
+            "name": "rider"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 9,
+            "name": "motorcycle"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 10,
+            "name": "bicycle"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 11,
+            "name": "auto rickshaw"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 12,
+            "name": "car"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 13,
+            "name": "truck"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 14,
+            "name": "bus"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 15,
+            "name": "caravan"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 16,
+            "name": "trailer"
+        },
+        {
+            "supercategory": "Vehicles",
+            "id": 17,
+            "name": "vehicle fallback"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 18,
+            "name": "curb"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 19,
+            "name": "wall"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 20,
+            "name": "fence"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 21,
+            "name": "guard rail"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 22,
+            "name": "billboard"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 23,
+            "name": "tradfic sign"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 24,
+            "name": "traffic light"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 25,
+            "name": "pole"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 26,
+            "name": "pole group"
+        },
+        {
+            "supercategory": "Road Side Objects",
+            "id": 27,
+            "name": "obs-str-bar fallback"
+        },
+        {
+            "supercategory": "Far Objects",
+            "id": 28,
+            "name": "buuilding"
+        },
+        {
+            "supercategory": "Far Objects",
+            "id": 29,
+            "name": "bridge"
+        },
+        {
+            "supercategory": "Far Objects",
+            "id": 30,
+            "name": "tunnel"
+        },
+        {
+            "supercategory": "Far Objects",
+            "id": 31,
+            "name": "vegetation"
+        },
+        {
+            "supercategory": "Sky",
+            "id": 32,
+            "name": "sky"
+        },
+        {
+            "supercategory": "Sky",
+            "id": 33,
+            "name": "fallback background"
+        }
+    ]
+}

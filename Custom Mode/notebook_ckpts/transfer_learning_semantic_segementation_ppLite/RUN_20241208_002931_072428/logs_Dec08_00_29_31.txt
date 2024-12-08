@@ -1,0 +1,96 @@
+[2024-12-08 00:28:43] INFO - super_gradients.common.crash_handler.crash_tips_setup - Crash tips is enabled. You can set your environment variable to CRASH_HANDLER=FALSE to disable it
+[2024-12-08 00:28:44] DEBUG - matplotlib - matplotlib data path: /home/gaurav/Documents/Semester 5/DL/DL Project/Custom Mode/.venv/lib/python3.10/site-packages/matplotlib/mpl-data
+[2024-12-08 00:28:44] DEBUG - matplotlib - CONFIGDIR=/home/gaurav/.config/matplotlib
+[2024-12-08 00:28:44] DEBUG - matplotlib - interactive is False
+[2024-12-08 00:28:44] DEBUG - matplotlib - platform is linux
+[2024-12-08 00:28:44] DEBUG - matplotlib - CACHEDIR=/home/gaurav/.cache/matplotlib
+[2024-12-08 00:28:44] DEBUG - matplotlib.font_manager - Using fontManager instance from /home/gaurav/.cache/matplotlib/fontlist-v390.json
+[2024-12-08 00:28:44] DEBUG - super_gradients.common.sg_loggers.clearml_sg_logger - Failed to import clearml
+[2024-12-08 00:28:45] DEBUG - hydra.core.utils - Setting JobRuntime:name=UNKNOWN_NAME
+[2024-12-08 00:28:45] DEBUG - hydra.core.utils - Setting JobRuntime:name=app
+[2024-12-08 00:28:45] DEBUG - hydra.core.utils - Setting JobRuntime:name=app
+[2024-12-08 00:28:45] WARNING - super_gradients.training.utils.checkpoint_utils - :warning: The pre-trained models provided by SuperGradients may have their own licenses or terms and conditions derived from the dataset used for pre-training.
+ It is your responsibility to determine whether you have permission to use the models for your use case.
+ The model you have requested was pre-trained on the cityscapes dataset, published under the following terms: https://www.cs.toronto.edu/~kriz/cifar.html
+[2024-12-08 00:28:45] INFO - super_gradients.training.utils.checkpoint_utils - Successfully loaded pretrained weights for architecture pp_lite_t_seg75
+[2024-12-08 00:28:45] DEBUG - super_gradients.training.utils.checkpoint_utils - Trying to load preprocessing params from checkpoint. Preprocessing params in checkpoint: False. Model PPLiteSegT inherit HasPredict: True
+[2024-12-08 00:29:30] WARNING - super_gradients.training.sg_trainer.sg_trainer - Train dataset size % batch_size != 0 and drop_last=False, this might result in smaller last batch.
+[2024-12-08 00:29:31] INFO - super_gradients.training.sg_trainer.sg_trainer - Starting a new run with `run_id=RUN_20241208_002931_072428`
+[2024-12-08 00:29:31] INFO - super_gradients.training.sg_trainer.sg_trainer - Checkpoints directory: ./notebook_ckpts/transfer_learning_semantic_segementation_ppLite/RUN_20241208_002931_072428
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44648
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44711
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44670
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44632
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44687
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44693
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44666
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44668
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44690
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44651
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44711
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44687
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44632
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44666
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44693
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44651
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44668
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44690
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44648
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44670
+[2024-12-08 00:29:31] INFO - super_gradients.training.utils.sg_trainer_utils - TRAINING PARAMETERS:
+    - Mode:                         Single GPU
+    - Number of GPUs:               1          (1 available on the machine)
+    - Full dataset size:            10         (len(train_set))
+    - Batch size per GPU:           4          (batch_size)
+    - Batch Accumulate:             1          (batch_accumulate)
+    - Total batch size:             4          (num_gpus * batch_size)
+    - Effective Batch size:         4          (num_gpus * batch_size * batch_accumulate)
+    - Iterations per epoch:         3          (len(train_loader))
+    - Gradient updates per epoch:   3          (len(train_loader) / batch_accumulate)
+    - Model: PPLiteSegT  (8.03M parameters, 8.03M optimized)
+    - Learning Rates and Weight Decays:
+      - default: (8.03M parameters). LR: 0.005 (8.03M parameters) WD: 0.0001, (8.03M parameters)
+
+[2024-12-08 00:29:31] INFO - super_gradients.training.sg_trainer.sg_trainer - Started training for 10 epochs (0/9)
+
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44668
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44670
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44651
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44666
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44711
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44648
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44687
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44632
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44693
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+[2024-12-08 00:29:31] DEBUG - PIL.PngImagePlugin - STREAM b'IDAT' 41 44690
+[2024-12-08 00:29:31] INFO - super_gradients.common.sg_loggers.base_sg_logger - [CLEANUP] - Successfully stopped system monitoring process
